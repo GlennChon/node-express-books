@@ -7,21 +7,29 @@ process.env.UV_THREADPOOL_SIZE = OS.cpus().length;
 const http = require("http");
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
 
 // Middleware
-app.use((req, res, next) => {
-  console.log("In the middleware!");
-  next();
+app.use(bodyParser.urlencoded());
+
+app.use("/add-product", (req, res, next) => {
+  res.send(
+    '<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></input></form>'
+  );
 });
 
-app.use((req, res, next) => {
-  console.log("In another middleware!");
-  next();
+app.use("/product", (req, res, next) => {
+  console.log(req.body);
+  res.redirect("/");
 });
 
-// Router Setup
+app.use("/", (req, res, next) => {
+  res.send("<h1>Hello from Express!</h1>");
+});
 
-// Server Setup
+// Router
+
+// Server
 const server = http.createServer(app);
 const port = process.env.PORT;
 
