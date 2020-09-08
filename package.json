@@ -1,7 +1,7 @@
 {
-  "name": "job-search-api",
+  "name": "node-express-books",
   "version": "1.0.0",
-  "description": "job search api",
+  "description": "node-express example",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GlennChon/JobSearchBackEnd.git"
+    "url": "git+https://github.com/GlennChon/node-express-books.git"
   },
   "author": "Glenn Chon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GlennChon/JobSearchBackEnd/issues"
+    "url": "https://github.com/GlennChon/node-express-books.git/issues"
   },
-  "homepage": "https://github.com/GlennChon/JobSearchBackEnd#readme",
+  "homepage": "https://github.com/GlennChon/node-express-books.git#readme",
   "dependencies": {
     "axios": "^0.20.0",
     "bcrypt": "^5.0.0",
